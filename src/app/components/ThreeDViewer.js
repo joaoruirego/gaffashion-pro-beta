@@ -67,6 +67,9 @@ import { getActiveScene } from "../actions/firebasee/get-active-scene";
 import { sendData } from "../actions/firebasee/send-data";
 import { scaleRotateMove } from "../actions/canvas/scale-rotate-move-new";
 
+//CHECK WINDOW
+const isBrowser = typeof window !== "undefined";
+
 const ThreeDViewer = () => {
   //VARIABLES//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //THREE
@@ -1157,7 +1160,7 @@ const ThreeDViewer = () => {
                 ) : (
                   "Voltar à Personalização"
                 )
-              ) : window.innerWidth > 750 ? (
+              ) : windowWidth > 750 ? (
                 "Concluído"
               ) : (
                 "->"
